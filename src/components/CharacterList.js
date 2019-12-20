@@ -25,16 +25,16 @@ export default function CharacterList() {
     setLoading(true);
 
     setTimeout(() => {
-      // axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`)
-      //   .then(res => {
-      //     console.log(res.data.results);
-      //     const characters = res.data.results;
-      //     setLoading(false);
-      //     setCharacter(characters);
-      //   })
-      //   .catch(err => {
-      //     console.log(err)
-      //   })
+      axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`)
+        .then(res => {
+          console.log(res.data.results);
+          const characters = res.data.results;
+          setLoading(false);
+          setCharacter(characters);
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }, 750)
 
   }, [page]);
