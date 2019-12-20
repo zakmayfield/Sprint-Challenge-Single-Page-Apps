@@ -35,6 +35,28 @@ nav a:hover{
   
 }
 
+.outterContainer{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.formContainer{
+  margin: 5vh auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+label{
+  display: flex;
+  flex-flow: column;
+}
+
+input{
+  margin: 2vh 0;
+}
+
 .grid-view {
   display: flex;
   flex-wrap: wrap;
@@ -57,4 +79,8 @@ nav a:hover{
 
 header h1 {
   text-align: center;
+}
+
+span:hover{
+  background: #F0E14A;
 }

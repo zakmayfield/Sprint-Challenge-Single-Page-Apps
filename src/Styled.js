@@ -55,3 +55,47 @@ export const nav = styled.nav`
 export const NavLink = styled.a`
 
 `;
+
+
+//=====Pagination=====
+
+
+export const PageButton = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  padding: 1vh 1vw;
+  margin: 0 .5vw
+
+  font-size: 2rem;
+
+  cursor: pointer;
+`;
+
+export const outterButtons = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+ 
+
+  padding: 1vh 1vw;
+  margin: 0 1vw
+
+  font-size: 1rem;
+
+  cursor: pointer;
+`;
+
+export const Pagination = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
