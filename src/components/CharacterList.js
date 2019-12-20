@@ -1,16 +1,40 @@
 import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import Loader from 'react-loader-spinner';
+import * as Styled from '../Styled';
 
 export default function CharacterList() {
-  // TODO: Add useState to track data from useEffect
+
+  const [characters, setCharacter] = useState([]);
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+
+    axios.get(`https://rickandmortyapi.com/api/character/`)
+      .then(res => {
+        console.log(res.data.results);
+        const characters = res.data.results;
+        setCharacter(characters);
+      })
+      .catch(err => {
+        console.log(err)
+      })
+
+  }, [])
 
   return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
+    <Styled.cList className="cList">
+      {
+          characters.map(person => {
+          return (
+            <Styled.cCard key={person.id} className="cCard">
+              <Styled.cImage className="cImage" src={person.image} />
+              <Styled.cName className="cName">{person.name}</Styled.cName>
+              <Styled.cSpecies className="cSpecies">{person.species}</Styled.cSpecies>
+              <Styled.cOrigin className="cOrigin">{person.origin.name}</Styled.cOrigin>
+            </Styled.cCard>
+          )
+        })
+      }
+    </Styled.cList>
   );
 }
