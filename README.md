@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Pros: Once the page has initially loaded, there is little to no load time when rendering to the DOM, unlike with server side the page loads bit by bit, so you don't get the full effect of the page, animations are easier to implement.
 
 ## Project Set Up
 
